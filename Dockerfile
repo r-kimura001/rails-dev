@@ -9,6 +9,7 @@ RUN apk --update --no-cache add git \
                                 libc-dev \
                                 g++ \
                                 mariadb-dev \
+                                mysql-client \
                                 linux-headers \
                                 nodejs
 
