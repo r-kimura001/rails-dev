@@ -23,7 +23,7 @@ COPY ./Gemfile.lock $APP_ROOT/Gemfile.lock
 RUN bundle install && \
     apk update && \
     # 環境構築したら不要になるファイルの削除
-    apk del libxml2-dev curl-dev make gcc libc-dev g++ linux-headers
+    apk del libxml2-dev curl-dev g++ linux-headers
 
 COPY . $APP_ROOT
 RUN rm -rf /usr/local/bundle/cache/* ${APP_ROOT}/vendor/bundle/cache/*
